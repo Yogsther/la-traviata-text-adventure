@@ -1,0 +1,64 @@
+#wrap{
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+#game-window{
+    width: 400px;
+    height: 300px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.37); 
+    padding: 50px;
+    overflow: auto;
+}
+
+#title-span{
+    width: 500px;
+    height: 30px;
+    color: white;
+    background: rgb(29, 29, 29);
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+#options{
+    width: 500px;
+    height: 100px;
+    background: rgb(29, 29, 29);
+    position: relative;
+}
+
+.button{
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    border: none;
+    position: absolute;
+    background: rgb(29, 29, 29);
+    color: white;
+    transition: all .1s;
+}
+
+.button:hover{
+    background: rgb(56, 56, 56);
+}
+
+.button:active{
+    transform: scale(0.95);
+}
+
+button:focus {outline:0;}
+
+
+.text{
+    display: block;
+    color: rgb(126, 126, 126);
+}
+
+.active-text{
+    display: block;
+    color: black;
+}

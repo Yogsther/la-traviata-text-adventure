@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>La traviata</title>
 </head>
 <body>
 
-    
+    <div id="wrap">
+    <div id="game-window">
 
 
-    <script src="main.js"></script>
+    </div>
+
+    <div id="title-span">Options</div>
+
+    <div id="options">
+        <button class="button" onclick="choice(0)" style="top: 0px; left: 0px;"></button>
+        <button class="button" onclick="choice(1)" style="top: 0px; right: 0px;"></button>
+        <button class="button" onclick="choice(2)" style="bottom: 0px; left: 0px;"></button>
+        <button class="button" onclick="choice(3)" style="bottom: 0px; right: 0px;"></button>
+    </div>
+</div>
+
+
+
+
+
+    <script src="php_handler.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>

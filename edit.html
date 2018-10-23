@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La traviata | Editor </title>
+</head>
+<body>
+
+    Add a quest:
+    <br>
+    <input type="text" placeholder="Question text" id="text">
+    <br>
+    Add options: (leave blank for no option)<br>
+    First enter the id, then the option text with a space<br>
+    Example: 12 Walk forward.
+    <br>
+    <input type="text" placeholder="Option 1" class="options"><br>
+    <input type="text" placeholder="Option 2" class="options"><br>
+    <input type="text" placeholder="Option 3" class="options"><br>
+    <input type="text" placeholder="Option 4" class="options"><br>
+    <br>
+    Special: Item that is given: <br>
+    <input type="text" placeholder="Special" id="special">
+    Special: Item that is given: (It's a good idea to not change it.)<br>
+    <input type="text" placeholder="ID" id="id">
+
+    <input type="password" placeholder="Token" id="token">
+
+    <br>
+
+    <button onclick="create_quest()">Create quest</button>
+    <button onclick="get_all_quests()">View all quests </button>
+
+
+    <style>
+    
+        *{
+            zoom: 1.25;
+        }
+
+        input{
+            width: 100%;
+        }
+    
+    </style>
+
+
+    <script src="php_handler.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>
