@@ -1,3 +1,6 @@
+on["smallest"] = response => {document.getElementById("id").value = response;};
+
+
 emit("req=get_recommended_id", "editor.php");
 
 function create_quest() {
