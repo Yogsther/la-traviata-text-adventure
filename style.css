@@ -8,9 +8,8 @@ body{
     display: block;
     position: relative;
     font-family: 'Roboto', sans-serif;
-    border-style: solid;
-    border-color: #f5c246;
-    border-width: 8px;
+    border: 8px solid #f5c246;;
+    outline: 3px solid #7f6024;
     top: -80px;
     z-index: 0 !important;
 }
