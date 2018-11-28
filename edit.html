@@ -1,54 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>La traviata | Editor </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
 </head>
+
 <body>
-    <style> body{background: white !important;} </style>
-    Add a quest:
-    <br>
-    <input type="text" placeholder="Question text" id="text">
-    <br>
-    Add options: (leave blank for no option)<br>
-    First enter the id, then the option text with a space<br>
-    Example: 12 Walk forward.
-    <br>
-    <input type="text" placeholder="Option 1" class="options"><br>
-    <input type="text" placeholder="Option 2" class="options"><br>
-    <input type="text" placeholder="Option 3" class="options"><br>
-    <input type="text" placeholder="Option 4" class="options"><br>
-    <br>
-    Special: Item that is given: <br>
-    <input type="text" placeholder="Special" id="special">
-    Special: Item that is given: (It's a good idea to not change it.)<br>
-    <input type="text" placeholder="ID" id="id">
-
-    <input type="password" placeholder="Token" id="token">
-
-    <br>
-
-    <button onclick="create_quest()">Create quest</button>
-    <button onclick="get_all_quests()">View all quests </button>
-
-
     <style>
-    
-        *{
-            zoom: 1.25;
+
+        .log{
+            transition: all .1s;
+        }
+        .log:hover{
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
         }
 
-        input{
-            width: 100%;
+        body{
+            background: white !important;
+            margin-top: 25px;
         }
+        .jumbotron{
+            background:rgb(72, 82, 197);
+            padding-top: 25px;
+            color: white;
+            padding-bottom: 3.5em;
+            
+        };      
+
+        .blue{
+            background: rgb(55, 55, 248) !important;
+        }
+
+        .btn{
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #add-new-quest-block > input{
+            width: 100%;
+            border-radius: 3.5px;
+            border: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        #add-new-quest-block > button{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    
+        .navbar{
+            margin: 0px;
+            padding: 0px;
+        }
+
+    
     
     </style>
 
 
+    <div class="container">
+        <span id="messages"></span>
+       
+        <div class="navbar">
+            <h3>La Traviata <span class="badge badge-secondary">v.1.0</span> | Quest editor</h3>
+            <div class="form-inline float-right text-right">
+                <input class="form-control float-right" style="margin-right:10px;" type="password" placeholder="Token"
+                    id="token">
+                <button onclick="get_all_quests()" class="btn btn-success">View all quests</button>
+            </div>
+
+
+
+
+        </div>
+
+
+        <h4>Add a new quest:</h4>
+        <div class="jumbotron" style="margin-top: 25px;" id="add-new-quest-block">
+
+            <strong>Quest text:<br></strong>
+            <input type="text" placeholder="Question text" id="text">
+            <strong>Add options: (leave blank for no option)<br></strong>
+            First enter the id, then the option text with a space<br>
+            Example: 12 Walk forward.
+            <br>
+            <input type="text" placeholder="Option 1" class="options"><br>
+            <input type="text" placeholder="Option 2" class="options"><br>
+            <input type="text" placeholder="Option 3" class="options"><br>
+            <input type="text" placeholder="Option 4" class="options"><br>
+            
+            Question Link ID: <strong>(Don't edit if you don't know what you're doing!)</strong><br>
+            <input type="text" placeholder="ID" id="id">
+
+            <button onclick="create_quest()" class="btn btn-default float-right">Submit quest</button>
+
+        </div>
+
+        <h4>Quest libary</h4>
+
+        <span id="quests-insert"></span>
+
+
+    </div>
+
+
+
+    <br>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="php_handler.js"></script>
     <script src="editor.js"></script>
+
 </body>
+
 </html>

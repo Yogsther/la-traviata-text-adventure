@@ -8,8 +8,7 @@
 	    $stmt->execute();
         $row = $stmt->fetchAll();
         
-        echo json_encode($row);
-
+        emit("all_quests", $row);
     }
 
     if($_POST["req"] == "get_recommended_id"){
@@ -29,12 +28,35 @@
         }
     }
 
+
+    if($_POST["req"] == "delete"){
+        if($token !== $_POST["token"]){
+            emit("error", "token");
+            return;
+        }
+
+        $stmt = $dbh->prepare("DELETE FROM story WHERE question_id=:question_id");
+        $stmt->bindParam(":question_id", $_POST["id"]);
+        $success = $stmt->execute();
+
+        if($success){
+            emit("success", "");
+        } else {
+            emit("error", "internal");
+        }
+    }
+
     if($_POST["req"] == "new_entry"){
 
         if($token !== $_POST["token"]){
-            echo "Incorrect token!";
+            emit("error", "token");
             return;
         }
+
+        // Try deleting if replace
+        $delete_stmt = $dbh->prepare("DELETE FROM story WHERE question_id=:question_id");
+        $delete_stmt->bindParam(":question_id", $_POST["id"]);
+        $huh = $delete_stmt->execute();
 
         $stmt = $dbh->prepare("INSERT INTO story (text, options, gives, question_id) VALUES (:text, :options, :gives, :question_id)");
         $stmt->bindParam(':text', $_POST["text"]); 
@@ -44,13 +66,11 @@
         $success = $stmt->execute();
         
         if($success) {
-            echo "Success!";
+            emit("success", "");
         } else {
-            echo $stmt->error;
-            echo "Failed to insert";
+            emit("error", "internal");
         }
     }
-
 
 ?>
 
