@@ -23,7 +23,7 @@
 
 #### Exciting emit framework!
 
-Thanks to my proprietary and revolutionary new framework, creating PHPxJavaScript applications has never been more simple nor fun! /s
+Thanks to my proprietary and revolutionary new framework - creating PHPxJavaScript applications has never been more simple nor fun! /s
 
 ##### Example (php): Sending from PHP to Client
 
