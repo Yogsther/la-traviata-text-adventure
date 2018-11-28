@@ -10,67 +10,68 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 
-</head>
-
-<body>
     <style>
 
         .log{
-            transition: all .1s;
-        }
-        .log:hover{
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        body{
-            background: white !important;
-            margin-top: 25px;
-        }
-        .jumbotron{
-            background:rgb(72, 82, 197);
-            padding-top: 25px;
-            color: white;
-            padding-bottom: 3.5em;
-            
-        };      
-
-        .blue{
-            background: rgb(55, 55, 248) !important;
-        }
-
-        .btn{
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #add-new-quest-block > input{
-            width: 100%;
-            border-radius: 3.5px;
-            border: none;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding: 5px;
-        }
-
-        #add-new-quest-block > button{
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
+                transition: all .1s;
+            }
+            .log:hover{
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+            }
     
-        .navbar{
-            margin: 0px;
-            padding: 0px;
-        }
-
+            body{
+                background: white !important;
+                margin-top: 25px;
+            }
+            .jumbotron{
+                background:rgb(72, 82, 197);
+                padding-top: 25px;
+                color: white;
+                padding-bottom: 3.5em;
+                
+            };      
     
+            .blue{
+                background: rgb(55, 55, 248) !important;
+            }
     
-    </style>
+            .btn{
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            #add-new-quest-block > input{
+                width: 100%;
+                border-radius: 3.5px;
+                border: none;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding: 5px;
+            }
+    
+            #add-new-quest-block > button{
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        
+            .navbar{
+                margin: 0px;
+                padding: 0px;
+            }
+    
+        
+        
+        </style>
 
+
+</head>
+
+<body>
 
     <div class="container">
         <span id="messages"></span>
-       
+
         <div class="navbar">
             <h3>La Traviata <span class="badge badge-secondary">v.1.0</span> | Quest editor</h3>
             <div class="form-inline float-right text-right">
@@ -98,7 +99,7 @@
             <input type="text" placeholder="Option 2" class="options"><br>
             <input type="text" placeholder="Option 3" class="options"><br>
             <input type="text" placeholder="Option 4" class="options"><br>
-            
+
             Question Link ID: <strong>(Don't edit if you don't know what you're doing!)</strong><br>
             <input type="text" placeholder="ID" id="id">
 

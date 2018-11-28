@@ -29,7 +29,7 @@ CREATE TABLE `story` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `question_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `story` (
 
 LOCK TABLES `story` WRITE;
 /*!40000 ALTER TABLE `story` DISABLE KEYS */;
-INSERT INTO `story` VALUES ('\"#name is standing on a balcony... Alfredo is coming to talk to her.\"','[\"1 Talk with him\",\"2 Ignore him\"]','',10,0),('\"#name and Alfredo talk about their love. Alfredo confesses he loves her a lot.  Later, at the party - Alfredo prosposes a toast and talks about his love about #name. Even later, #name and Alfredo talk in private.\"','[\"4 Accept him\",\"5 Reject him\"]','happy',11,1),('\"Later, at the party - Alfredo proposes a toast and talks about his love for #name.  Even later, #name and Alfredo talk in private.\"','[\"4 Accept him\",\"6 Reject him\"]','',13,2),('\"Alfredo leaves and commits suicide. #name is devastated and dies from stress. Game Over.\"','[\"0 Replay\"]','',14,6);
+INSERT INTO `story` VALUES ('\"#name and Alfredo talk about their love. Alfredo confesses he loves her a lot.  Later, at the party - Alfredo prosposes a toast and talks about his love about #name. Even later, #name and Alfredo talk in private.\"','[\"4 Accept him\",\"5 Reject him\"]','',20,1),('\"#name is standing on a balcony... Alfredo is coming to talk to her.\"','[\"1 Talk to him\",\"2 Ignore him\"]','',21,0),('\"Later that evening, Alfredo proposes a toast in front of the party guests. He talks about his love for #name.\"','[\"4 Accept him\",\"6 Reject him\"]','',22,2),('\"Alfredo leaves and commits suicide. #name is devastated and dies from stress. The other day #name wakes up in the house. Alfredo\'s father pays a visit - he cries to her about his son, but doesn\'t blame her. #name is devastated and dies of depression... Game Over.\"','[\"0 Replay\"]','',23,6),('\"Alfredo leaves. #name wakes up in the house. Doctor Grenvil pays a visit. He gives #name a bottle of pills that will help with the sickness. Next day, Alfredo comes back and confesses his love once again. #name starts hurting...\"','[\"10 Fall in his arms\",\"11 Use pills\",\"99 Do nothing\"]','',24,5),('\"You died. Game Over.\"','[\"0 Try again\"]','',25,99),('\"#name and Alfredo wake up in the house. #name leaves for a short moment. While #name is out, Doctor Grenvil pays Alfredo a visit but doesn\'t give him the pills #name needs because of his jealousy. Later that night, #name collapses and dies.\"','[\"0 Game Over. Try again.\"]','',26,4),('\"#name falls in his arms and dies.\"','[\"0 Game Over. Try again.\"]','',27,10),('\"#name takes a pill from the pill bottle. #name feels immediately better and they live a happy life ever after.\"','[\"0 Game Over. Try again.\"]','',28,11);
 /*!40000 ALTER TABLE `story` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-27 14:01:57
+-- Dump completed on 2018-11-28  9:11:15
