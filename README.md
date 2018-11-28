@@ -7,7 +7,7 @@
 
 #### Editor, built with Boostrap
 
-![Bootstrap Editor](img/boostrap-showcase.png)
+![Bootstrap Editor](img/bootstrap-showcase.png)
 
 
 #### How to play
@@ -35,14 +35,14 @@ emit("all_quests" /* Call sign */, $row /* Variables */);
 
 ```javascript
 on["all_quests" /* Call sign */] = response => {
-	console.log(response);
+    console.log(response);
 }
 ```
 
 ##### Example (js): Sending it from Javascript to the server
 
 ```javascript
-emit("variable_name=value&another=23" /* Variables */, "editor.php" /* Destination */);
+emit("a_string=value&an_int=23" /* Variables */, "editor.php" /* Destination */);
 ```
 
 **If you want to use this framwork, clone php_handler.js for client and emit.php for the server.**
